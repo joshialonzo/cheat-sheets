@@ -16,6 +16,9 @@ docker exec -it postgres_11 psql -U postgres
 # create superuser
 docker exec -it postgres_11 createuser -e -E -s -h localhost -p 5432 -U postgres -w -P django_psql
 
+# reset database
+docker exec -it postgres_11 psql -U postgres initdb
+
 # download pgadmin4
 docker pull dpage/pgadmin4
 
