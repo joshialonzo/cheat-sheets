@@ -19,6 +19,9 @@ python manage.py showmigrations
 # apply changes to database for all apps
 python manage.py migrate
 
+# apply changes to database for a specific app
+python manage.py migrate <app_name>
+
 # save migrations ready to be saved
 python manage.py sqlmigrate <app_name> <migration_number>
 

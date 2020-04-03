@@ -16,6 +16,20 @@ git --version
 # get into the app dir
 cd <name_of_the_app>
 
+# Alternative 1: Use virtualenv
+
+# create a virtual env for the django app
+<python_version> -m venv <virtualenv_name>
+python3.7 -m venv env
+
+# activate the virtualenv
+source <virtualenv_name>/bin/activate
+
+# deactivate the virtualenv
+deactivate
+
+# Alternative 2: Use pipenv
+
 # create a virtual env for the django app
 pipenv install --python <python_version>
 
