@@ -78,6 +78,10 @@ git branch -a
 
 # download a specific branch
 git checkout -b <local_branch_name> origin/<remote_branch_name>
+git checkout -t origin/<remote_branch_name>
+
+# create a new local branch from an existing local branch
+git checkout -b <new_branch_name> <local_branch_name>
 
 # configure as a regular repository
 git config --bool core.bare false
@@ -87,3 +91,28 @@ git clone -b <remote_branch_name> <repository>
 
 # start a project from a branch
 git clone -b <remote_branch_name> <repository> && cd <new_folder> && rm -rf .git
+
+# Push branch to another branch
+git push <remote> <local_branch>:<remote_name>
+git push origin josue/ch3634:josue/ch3634
+
+### Feature Branch Flow ###
+git checkout master
+git checkout -b develop
+git checkout -b feature_branch
+# work happens on feature branch
+git checkout develop
+git merge feature_branch
+git checkout master
+git merge develop
+# delete feature branch
+git branch -d feature_branch
+
+# Main tutorials
+https://www.atlassian.com/git/tutorials
+
+# Rename a local and remote branch in git
+https://multiplestates.wordpress.com/2015/02/05/rename-a-local-and-remote-branch-in-git/
+
+# Gitflow workflow
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
